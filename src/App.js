@@ -9,12 +9,14 @@ import Vid from "./img/video.svg";
 import Music from "./img/music.svg";
 import Right from "./img/forward.svg";
 import Down from "./img/down.svg";
+import Click from "./img/click.mp3";
 
 const App = () => {
   const Folder = ({ name, icon, clsname = "folder__name", children }) => {
     const [isShown, isShownSet] = useState(false);
-
+    const ClickEffect = new Audio(Click);
     const clickEvent = (_) => {
+      ClickEffect.play();
       isShownSet((e) => !e);
     };
 
@@ -45,7 +47,7 @@ const App = () => {
     );
   };
   return (
-    <div>
+    <div className="wrapper">
       <Folder name="This Pc" clsname="main__folder" icon={ThisPc}>
         <Folder name="Desktop" icon={Desktop}>
           <File name="cat.png" icon={Pic} />
@@ -61,6 +63,7 @@ const App = () => {
         </Folder>
         <Folder name="Video" icon={Vid}>
           <File name="sum pair zero.mp4" icon={Vid} />
+          <File name="kill me heal me.mp4" icon={Vid} />
 
           <Folder name="HomeWork" icon={Desktop} clsname="subFolder" />
         </Folder>
