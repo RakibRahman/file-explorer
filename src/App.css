@@ -3,7 +3,10 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+.wrapper {
+  margin: 120px auto;
+  width: 900px;
+}
 .explorer {
   width: 100%;
   max-width: 600px;
@@ -50,6 +53,7 @@
 .folder__name,
 .file {
   padding: 0.2rem 0.3rem;
+  border-radius: 3px;
 }
 .file:hover {
   background-color: #0097e6;
