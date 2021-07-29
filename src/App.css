@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.explorer .file {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin: 0.5rem 0rem 0.5rem 6rem;
+}
+.explorer > * {
+  margin-left: 3rem;
+}
+.nameIcon {
+  display: flex;
+  align-items: center;
+}
+.explorer img {
+  width: 50px;
+}
+.file img {
+  width: 20px;
+}
+.subFolder img {
+  width: 20px;
+}
